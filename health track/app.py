@@ -27,7 +27,7 @@ medicines_table = dynamodb.Table('Medicines')
 reports_table = dynamodb.Table('Reports')
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+app.secret_key = 'aL9f@2mK$1vZx8!pQeR0tW5j#HuY3^Bn'
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -240,5 +240,5 @@ def solve_appointment(appointment_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+   app.run(debug=True, host='0.0.0.0', port=5000)
 
