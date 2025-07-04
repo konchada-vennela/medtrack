@@ -234,7 +234,7 @@ def solve_appointment(appointment_id):
             patient = users_table.get_item(Key={"username": appointment['patient_username']}).get('Item')
             if patient:
                 message = f"Hello {patient['username']},\n\nYour appointment has been reviewed.\nDiagnosis: {diagnosis}\n\n- MedTrack"
-                sns.publish(TopicArn=SNS_TOPIC_ARN, Message=message, Subject="Appointment Diagnosis")
+                sns.publish(TopicArn=aws:sns:us-east-1:982534367200:medtrack, Message=message, Subject="Appointment Diagnosis")
         return redirect('/doctor_view_appointments')
     return render_template('solve_appointment.html', appointment=appointment)
 
