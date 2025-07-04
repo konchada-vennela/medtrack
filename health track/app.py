@@ -9,15 +9,13 @@ from email.message import EmailMessage
 
 # AWS Configuration
 AWS_REGION_NAME = "us-east-1"
-AWS_ACCESS_KEY_ID = "<your-access-key-id>"
-AWS_SECRET_ACCESS_KEY = "<your-secret-access-key>"
-SNS_TOPIC_ARN = "<your-sns-topic-arn>"
+AWS_SECRET_ACCESS_KEY = "<aL9f@2mK$1vZx8!pQeR0tW5j#HuY3^Bn>"
+SNS_TOPIC_ARN = "<aws:sns:us-east-1:982534367200:medtrack>"
 
 # AWS Resources
 session_boto3 = boto3.Session(
-    aws_access_key_id=AWS_ACCESS_KEY_ID,
-    aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
-    region_name=AWS_REGION_NAME
+    aws_secret_access_key=aL9f@2mK$1vZx8!pQeR0tW5j#HuY3^Bn,
+    region_name=us-east-1
 )
 dynamodb = session_boto3.resource('dynamodb')
 sns = session_boto3.client('sns')
