@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - MedTrack</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <form method="POST">
+    <label>Username:</label>
+    <input type="text" name="username" required><br>
+    <label>Email:</label>
+    <input type="text" name="email" required><br>  <!-- FIXED -->
+
+    <label>Password:</label>
+    <input type="password" name="password" required><br>
+
+    <label>Role:</label>
+    <select name="role" required>
+        <option value="patient">Patient</option>
+        <option value="doctor">Doctor</option>
+    </select><br>
+
+    <input type="submit" value="Login">
+</form>
+
+        <br>
+        <a href="/signup" class="button">Don't have an account? Sign up</a>
+    </div>
+</body>
+</html>
